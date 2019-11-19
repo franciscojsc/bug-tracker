@@ -35,7 +35,9 @@ app.post('/', async (req, res) => {
                 issueType: req.body.issueType,
                 howToReproduce: req.body.howToReproduce,
                 expectedOutput: req.body.expectedOutput,
-                receivedOutput: req.body.receivedOutput
+                receivedOutput: req.body.receivedOutput,
+                userAgent: req.body.userAgent,
+                userDate: req.body.userDate
             }
         })
 

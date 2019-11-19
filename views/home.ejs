@@ -1,6 +1,15 @@
 <html>
     <head>
         <title>BugTracker</title>
+        <script>
+            //navegador + relogio
+            document.onreadystatechange = () => {
+                if(document.readyState === 'interactive') {
+                    document.getElementById('userAgent').value = window.navigator.userAgent
+                    document.getElementById('userDate').value = new Date()
+                }
+            }
+        </script>
     </head>
     <body>
         <h1>Ferramenta de relato de Bugs</h1>
@@ -24,6 +33,9 @@
                         
             <label for="receivedOutput">A saída recebida?</label>
             <input type="text" id="receivedOutput" name="receivedOutput" />
+
+            <input type="hidden" id="userAgent" name="userAgent" />
+            <input type="hidden" id="userDate" name="userDate" />
 
             <button>Enviar solicitação!</button>
         </form>
