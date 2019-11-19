@@ -37,10 +37,10 @@ app.post('/', async (req, res) => {
                 expectedOutput: req.body.expectedOutput,
                 receivedOutput: req.body.receivedOutput,
                 userAgent: req.body.userAgent,
-                userDate: req.body.userDate
+                userDate: req.body.userDate,
+                source: req.query.source || 'direct'
             }
         })
-
         res.send('Bug reoprtado com sucesso!')
     } catch (err) {
         res.send('Erro ao conectar')

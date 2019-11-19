@@ -23,7 +23,12 @@
             <input type="email" id="email" name="email" />
 
             <label for="issueType">Classificação:</label>
-            <input type="text" id="issueType" name="issueType" />
+            <select id="issueType" name="issueType">
+                <option value="">Selecione</option>
+                <option value="CRITICAL">Crítico</option>
+                <option value="BUG">Falha</option>
+                <option value="ENHANCEMENT">Melhoria</option>
+            </select>
 
             <label for="howToReproduce">Como reproduzir o erro?</label>
             <input type="text" id="howToReproduce" name="howToReproduce" />
