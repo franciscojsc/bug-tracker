@@ -1,13 +1,12 @@
 const express = require('express')
 const app = express()
+const path = require('path')
+
+app.set('view engine', 'ejs')
+app.set('views', path.resolve(__dirname, 'views'))
 
 app.get('/', (resquest, response) => {
-    response.send({
-        data: [
-            { id: 1 },
-            { id: 2 }
-        ]
-    })
+    response.render('home')
 })
 
 app.get('/soma', (resquest, response) => {
