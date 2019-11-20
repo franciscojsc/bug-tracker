@@ -18,11 +18,25 @@ app.get('/', (req, res) => {
 const url = 'https://script.google.com/macros/s/AKfycbxgwWPbOwDKAsBUUll0d8sacItxX87wKeKiLMf0dPdRiaGd24Q/exec'
 
 app.get('/bug', async (req, res) => {
+    let page = req.query.page || 1
+    if (req.query.page <= 0) {
+        page = 1
+    }
+    const numberLine = 50
+    const InitLine = (1 + (parseInt(numberLine) * page)) - 50
+
+    console.log('pg', page)
+    console.log('qtd de linhas', numberLine)
+    console.log('linha inicial', InitLine)
+
     try {
-        const { body } = await promisify(request.get)(`${url}?InitLine=${1}&InitColumn=${1}&numberLine=${10}&numberColumn=${10}`)
-        res.send(body)
+        const { body } = await promisify(request.get)(`${url}?InitLine=${InitLine}&InitColumn=${1}&numberLine=${numberLine}&numberColumn=${10}`)
+        res.render('bugs', {
+            bugs: JSON.parse(body),
+            page: { "pageAtual": page }
+        })
     } catch (err) {
-        res.send('Erro ao conectar')
+        res.send('Erro ao tentar recuperar os dados dos bugs')
         console.log(err)
     }
 })
