@@ -9,6 +9,7 @@ app.set('view engine', 'ejs')
 app.set('views', path.resolve(__dirname, 'views'))
 
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.render('home')
@@ -41,9 +42,9 @@ app.post('/', async (req, res) => {
                 source: req.query.source || 'direct'
             }
         })
-        res.send('Bug reoprtado com sucesso!')
+        res.render('sucesso')
     } catch (err) {
-        res.send('Erro ao conectar')
+        res.send('Erro ao enviar formulário')
         console.log(err)
     }
 })

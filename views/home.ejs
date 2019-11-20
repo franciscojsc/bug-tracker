@@ -1,6 +1,12 @@
 <html>
     <head>
         <title>BugTracker</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script>
             //navegador + relogio
             document.onreadystatechange = () => {
@@ -12,37 +18,73 @@
         </script>
     </head>
     <body>
-        <h1>Ferramenta de relato de Bugs</h1>
-        <p>Preencha todos os dados a seguir:</p>
 
-        <form method="post">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" />
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center" >
+                <a class="navbar-brand" href="/"><img src="/images/bugtracker.png" class="img-fluid" alt="Bug Tracker" /></a>
+            </nav>
+        </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" />
+        <div class="container">
 
-            <label for="issueType">Classificação:</label>
-            <select id="issueType" name="issueType">
-                <option value="">Selecione</option>
-                <option value="CRITICAL">Crítico</option>
-                <option value="BUG">Falha</option>
-                <option value="ENHANCEMENT">Melhoria</option>
-            </select>
+            <h1 class="text-center"> Ferramenta de relato de Bugs <i class="fas fa-bug"></i> <i class="fas fa-bug"></i> <i class="fas fa-bug"></i> </h1>
+            <p>Preencha todos os dados a seguir:</p>
 
-            <label for="howToReproduce">Como reproduzir o erro?</label>
-            <input type="text" id="howToReproduce" name="howToReproduce" />
+            <form method="post" class="was-validated">
 
-            <label for="expectedOutput">A saída esperada?</label>
-            <input type="text" id="expectedOutput" name="expectedOutput" />
-                        
-            <label for="receivedOutput">A saída recebida?</label>
-            <input type="text" id="receivedOutput" name="receivedOutput" />
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Preencha com o nome completo" required/>
+                </div>
 
-            <input type="hidden" id="userAgent" name="userAgent" />
-            <input type="hidden" id="userDate" name="userDate" />
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Preencha com email" required/>
+                </div>
 
-            <button>Enviar solicitação!</button>
-        </form>
+                <div class="form-group">
+                    <label for="issueType">Classificação:</label>
+                    <select id="issueType" name="issueType" class="form-control" placeholder="Selecione o tipo" required>
+                        <option value="">Selecione</option>
+                        <option value="CRITICAL">Crítico</option>
+                        <option value="BUG">Falha</option>
+                        <option value="ENHANCEMENT">Melhoria</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="howToReproduce">Como reproduzir o erro?</label>
+                    <textarea id="howToReproduce" name="howToReproduce" class="form-control" placeholder="Descrevar como reproduzir o erro" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="expectedOutput">A saída esperada?</label>
+                    <textarea id="expectedOutput" name="expectedOutput" class="form-control" placeholder="Saída esperada" required></textarea>
+                </div>
+
+                <div class="form-group">    
+                    <label for="receivedOutput">A saída recebida?</label>
+                    <textarea id="receivedOutput" name="receivedOutput" class="form-control" placeholder="Saída recebida" required></textarea>
+                </div>
+
+                <input type="hidden" id="userAgent" name="userAgent" />
+                <input type="hidden" id="userDate" name="userDate" />
+
+                <button class="btn btn-primary btn-lg btn-block">Enviar solicitação!</button>
+
+            </form>
+        
+        </div>
+
+        <div class="container-fluid text-center">
+            <footer>
+                <span class="text-muted">  Feito por <a href="https://github.com/franciscojsc">@franciscojsc</a></span>
+            </footer>
+        </div>        
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+       
     </body>
 </html>
