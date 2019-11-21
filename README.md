@@ -1,0 +1,13 @@
+# BUG TRACKER
+
+Ferramenta para relatos de Bugs.
+
+![Bug Tracker](https://lh3.googleusercontent.com/SFyizSSlDXFHA-9Dy4z6vqDCwQassgjSWWvH-agBz-kdJ3A7ruCUXmd9E8B4ENiMY6zo9hSrebFWvjRBJQ9JQCDcaumqtAb_rVVEWTciNHktt2QvJEFMgTUS7hQz39fZt536W98cYTYP-TXtyoNjGAaGG8eyXR-STjxNUPbx3JpYzuOtct3GSLDEUEWhWpj0aoHDUFFjDwiAm-qlRdVBeYoFdRki4i_bwwZb-1w-_S5-7zgwdXQYqf_olJzHte4B60mx8cG0YOnIpzov8BM5jrD3BDFUU1zJcFefWKHjlzG2DxeowokGxmJDcOuhEvGJ8Q36WsVBpdaFqJtMAeRFoBC_dosa4EoqA7IM2iOaW86ThmaCCtKNHfrQQRVjQUZutRtRPlG3ZgmGj42Llc2Y2XauM7EqQcJdVOL2QjpsgeaYMt__tvubWQt24c0Gxex6gE8VOqEUiQHg9izfSCXnRmR6PCXcA6XOl7veCa1P5CuCFltBOpkh_TY7EvFpLUrmnSmcEHiYVzE5n_kichWWpspBlYHmDEGT2KRBWCY7fAXPkJGcMId_4y6oBcMxWeUBWsnUwTUjONe6QJWHc1_5pyCdBkptqJ7ievg9lC_yWFKSQJKiJgp4ri54atcdEHM3jY1sU5qJXeyGYV2m28ApHhXuBkWjS2sxwrh32KDid5CJnHRq6ZLagHd6I9EXuYgx8bMI1JVJfpzuXS4q1hJfeRQMkoS8MTU_LYk1qfP_Qy5hXbpg=w730-h640-no "Aplicação Bug Tracker")
+
+## Principais tecnologias utilizadas
+
+![Node](https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png "Node.js")
+![Express](https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png "Express")
+![Bootstrap](https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png "Bootstrap")
+
+Aplicação para relatos de bugs - Desenvolvido durante o FullStack Lab do [DevPleno](https://www.devpleno.com).
