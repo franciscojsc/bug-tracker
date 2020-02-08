@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "env": {
+        "PLANILHA_GOOGLE":"@planilha-google-bug-tracker"
+    },
     "builds": [
         {
             "src": "*.js",

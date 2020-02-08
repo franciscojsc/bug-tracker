@@ -5,6 +5,10 @@ const bodyParser = require('body-parser')
 const request = require('request')
 const { promisify } = require('util')
 
+require('dotenv').config();
+
+const url = process.env.PLANILHA_GOOGLE
+
 app.set('view engine', 'ejs')
 app.set('views', path.resolve(__dirname, 'views'))
 
@@ -14,8 +18,6 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
     res.render('home')
 })
-
-const url = 'https://script.google.com/macros/s/AKfycbxgwWPbOwDKAsBUUll0d8sacItxX87wKeKiLMf0dPdRiaGd24Q/exec'
 
 app.get('/bug', async (req, res) => {
     let page = req.query.page || 1
