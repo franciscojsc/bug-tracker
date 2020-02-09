@@ -14,7 +14,7 @@ Aplicação para relatos de bugs - Desenvolvido durante o FullStack Lab do [DevP
 
 ## Configurações :wrench:
 
-Crie uma [planilha google](new.sheets) em branco. Pegue o id da planilha que está na url, por exemplo:
+Crie uma [planilha google](https://sheets.new) em branco. Pegue o id da planilha que está na url, por exemplo:
 
 ```
 https://docs.google.com/spreadsheets/d/14q_AE9P8bRvanks7rO08FmRs-urxG6C0bhOwRTTTTI/edit#gid=0
